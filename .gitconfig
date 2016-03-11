@@ -9,3 +9,5 @@
 [user]
 	name = Andrej Bartko
 	email = bartkoa@ryanair.com
+[core]
+	editor = /usr/bin/vim

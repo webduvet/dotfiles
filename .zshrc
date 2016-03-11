@@ -53,7 +53,7 @@ plugins=(git npm nvm node bower brew web_search)
 
 # User configuration
 
-export PATH="/Users/bartkoa/local/bin:/Users/bartkoa/local/bin/:/Users/bartkoa/.nvm/versions/node/v0.12.9/bin:/Users/bartkoa/Library/Haskell/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/Users/bartkoa/local/bin:/Users/bartkoa/local/bin/:/Users/bartkoa/.nvm/versions/node/v0.12.9/bin:/Users/bartkoa/Library/Haskell/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,3 +82,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+ggrep() {
+  grep -rnI --exclude-dir=node_modules --exclude-dir=vendor --exclude-dir=dist --color $1 ./$2
+}
+alias gg=ggrep
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
