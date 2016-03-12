@@ -133,6 +133,9 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
+  " auto complete
+  Plug 'https://github.com/Valloric/YouCompleteMe.git'
+
 call plug#end()
 
 set laststatus=2
