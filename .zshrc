@@ -89,3 +89,9 @@ ggrep() {
 alias gg=ggrep
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export http_proxy=http://10.11.19.40:8080/
+export https_proxy=http://10.11.19.40:8080/
+export NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist
+
+alias vi=/usr/local/Cellar/vim/7.4.1525/bin/vim

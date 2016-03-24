@@ -133,6 +133,18 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
+  Plug 'tpope/vim-fugitive'
+  
+  Plug 'pangloss/vim-javascript'
+
+  Plug 'easymotion/vim-easymotion'
+
+  Plug 'haya14busa/incsearch.vim'
+
+  Plug 'scrooloose/nerdcommenter'
+
+  Plug 'mileszs/ack.vim'
+
 call plug#end()
 
 set laststatus=2
@@ -202,3 +214,7 @@ nmap <leader>bl :BuffergatorOpen<cr>
 " Shared bindings from Solution #1 from earlier
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
+
+map / <Plug>(incsearch-forward)
+
+map <Leader>s :%s/\<<C-r><C-w>\>/
