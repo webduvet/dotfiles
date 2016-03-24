@@ -1,17 +1,29 @@
-export http_proxy=http://10.11.19.40:8080/
-export https_proxy=http://10.11.19.40:8080/
-export NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist
+export CLICOLOR=1
+
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\$ '
+
+export MAGICK_HOME="$HOME/bin/ImageMagick-6.8.9"
+export PATH="$MAGICK_HOME/bin:$PATH"
+export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+
+export PATH=$HOME/local/bin:$PATH
 
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
   export TERM='xterm-256color'
 else
   export TERM='xterm-color'
 fi
-export PATH=$HOME/local/bin:$PATH
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+alias ll='ls -al'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# If id command returns zero, you’ve root access.
+if [ $(id -u) -eq 0 ];
+then # you are root, set red colour prompt
+  PS1="\\[$(tput setaf 1)\\]\\u@\\h:\\w #\\[$(tput sgr0)\\]"
+fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+alias gg='grep -rn'
+
+

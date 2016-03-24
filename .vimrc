@@ -144,6 +144,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
 
   Plug 'mileszs/ack.vim'
+  " auto complete
+  Plug 'https://github.com/Valloric/YouCompleteMe.git'
 
 call plug#end()
 
